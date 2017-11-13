@@ -1,0 +1,627 @@
+@import 'src/sass/commom/_reset';
+@import 'src/sass/commom/_variable';
+@import 'src/sass/commom/_mixin';
+@import 'src/sass/commom/_fontIcon';
+// 侧栏
+.sider-bar {}
+
+.page-main {
+    position: relative;
+    top: 50px;
+    left: 200px;
+    z-index: 0;
+    width: 80%;
+    &.white {
+        color: $color_fff;
+    }
+    &.other {
+        background-color: $color_f0f3f4;
+        .header1 {
+            width: 99.8%;
+            margin: 0 0 20px 0;
+        }
+        .header2 {
+            width: 99.8%;
+            margin: 0 0 2px 0;
+            ;
+        }
+        .device-content-area {
+            margin: auto;
+            padding: 0 0 20px 0; // 加盟商分析页面使用到的样式
+            #analyze {
+                padding: 0 0 20px 22px;
+                border: 1px solid $color_eef0f0;
+                background-color: $color_fff;
+                .analyze-item {
+                    display: flex;
+                    > div {
+                        font: 12px/34px $default_family;
+                        width: 25%;
+                        margin-top: 15px;
+                        > div {
+                            display: inline-block;
+                            width: 158px;
+                            height: 32px;
+                            border: 1px solid $color_cfdadd;
+                        }
+                    }
+                }
+            }
+        }
+        .table tbody {
+            // background-color:$color_f0f3f4 !important;
+        }
+        .footer {
+            //  background-color:$color_f0f3f4 !important;
+        }
+        #shop-add {
+            width: 100%;
+            background-color: $color_fff;
+            position: relative;
+            z-index: 0;
+            padding-top: 20px;
+            .search {
+                position: absolute;
+                bottom: -100px;
+                left: 110px;
+                z-index: 0;
+                width: 76px;
+                height: 32px;
+                text-align: center;
+                line-height: 32px;
+                cursor: pointer;
+                border: 1px solid $color_cfdadd;
+            }
+            .save {
+                position: absolute;
+                bottom: -100px;
+                left: 250px;
+                z-index: 0;
+                width: 76px;
+                height: 32px;
+                text-align: center;
+                line-height: 32px;
+                cursor: pointer;
+                border: 1px solid $color_cfdadd;
+            }
+        }
+    } // 公共样式区域
+    .deploy-info {
+        position: relative;
+        z-index: 0;
+        border: 1px solid $color_dee5e7;
+        margin: 30px 0 0 30px;
+        padding: 14px 0 18px 25px;
+        width: 94.8%;
+        font: 12px/40px $default_family;
+        color: $color_333;
+        background-color: $color_f6f8f8;
+        .company {
+            display: flex;
+            .name {
+                width: 500px;
+            }
+        }
+        .modify {
+            position: absolute;
+            top: 9px;
+            right: 38px;
+            z-index: 0;
+            color: $color_169bd5;
+            cursor: pointer;
+        }
+    }
+    .deploy-list {
+        padding: 18px 0 0 0;
+        margin: 0 0 0 30px;
+        ul {
+            display: flex;
+            padding: 0;
+            flex-wrap: wrap;
+            li {
+                position: relative;
+                z-index: 0;
+                margin: 0 20px 10px 0;
+                border: 1px solid $color_dee5e7;
+                padding: 23px 0 18px 0;
+                width: 276px;
+                font: 700 12px/38px $default_family;
+                text-align: center;
+                color: $color_333;
+                .see {
+                    position: absolute;
+                    top: 14px;
+                    right: 9px;
+                    line-height: 0;
+                    color: $color_169bd5;
+                }
+            }
+        }
+    }
+    .deploy-echarts {
+        margin: 0 0 0 30px;
+        display: flex; // flex-wrap: wrap;
+        height: 444px;
+        div {
+            position: relative;
+            margin: 0 16px 0 0;
+            width: 32%;
+        }
+    } // 服务列表页面使用到的样式
+    .header {
+        padding: 0 0 0 30px;
+        width: 95.8%;
+        font: 14px/58px $default_family;
+        background-color: $color_fff;
+        h3 {
+            height: 58px;
+            font: 16px/58px$default_family;
+            font-weight: 700;
+            font-style: normal;
+            color: #58666e;
+        }
+    }
+    .hdeaer1 {
+        @extend .header;
+    }
+    .device-content-area {
+        padding: 0 0;
+        width: 95.8%;
+        .device-message {
+            margin-bottom: 6px;
+            padding: 22px 0 22px 0;
+            width: 100%;
+            font-family: $default_family;
+            font-weight: 500;
+            background: #fff;
+            &:after {
+                display: block;
+                clear: both;
+                content: '';
+            }
+            .form-group {
+                position: relative;
+                margin-left: 20px;
+                i {
+                    position: absolute;
+                    top: 9px;
+                    right: 4px;
+                    font-size: 20px;
+                    color: #999;
+                }
+                #js-add {
+                    margin: 0 0 0 10px;
+                }
+                .form-control {
+                    margin-left: 20px;
+                }
+                select.form-control {
+                    padding: 0 137px 0 12px;
+                    background: url(../images/bb.png) right center no-repeat;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                }
+                .btn {
+                    padding: 6px 24px;
+                }
+            }
+        }
+        .table {
+            margin: 0;
+            border: 1px solid #eef0f0;
+            border-bottom: none;
+            width: 100%;
+            color: #58666e;
+            thead {
+                background-color: $color_fff;
+                th {
+                    border: none;
+                    border-bottom: 1px solid #eef0f0;
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+            }
+            tbody {
+                background: #fff;
+                tr {
+                    td {
+                        overflow: hidden;
+                        border: none;
+                        border-bottom: 1px solid #eef0f0;
+                        text-align: center;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        vertical-align: middle;
+                        &:nth-child(2) {
+                            max-width: 300px;
+                        }
+                        &.handle {
+                            display: flex;
+                            justify-content: center;
+                            .status {
+                                float: left;
+                                margin: 6px 30px 0 30px;
+                                width: 36px;
+                                height: 19px;
+                                background: url(../images/u99.png) no-repeat;
+                                cursor: pointer;
+                            }
+                            .current {
+                                float: left;
+                                margin: 6px 30px 0 30px;
+                                width: 36px;
+                                height: 19px;
+                                background: url(../images/u88.png) no-repeat;
+                                cursor: pointer;
+                            }
+                            .find-device {
+                                float: left;
+                                border-radius: 5px;
+                                width: 61px;
+                                height: 28px;
+                                font: 12px/28px$default_family;
+                                color: #333;
+                                background-color: #cfdadd;
+                            }
+                        }
+                        &:nth-child(7),
+                        &:nth-child(n+7) {}
+                        button {
+                            border-radius: 5px;
+                            padding: 2px 12px;
+                            background-color: #cfdadd;
+                        }
+                        .js-status-controller {
+                            cursor: pointer;
+                        }
+                        .js-dormant {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            padding-top: 20px;
+            height: 50px;
+            background: #fff;
+            > div:nth-child(1) {
+                float: left;
+                padding: 0 0 0 20px;
+            }
+            > div:nth-child(2) {
+                float: right;
+                .pagination {
+                    position: relative;
+                    top: -10px;
+                    z-index: 0;
+                    margin: 0;
+                }
+            }
+        }
+    } // 工单详情
+    // 店铺的信息
+    .shop-info {
+        margin-left: 30px;
+        border: 1px solid $color_dee5e7;
+        padding: 16px 0 4px 34px;
+        font: 12px/40px $default_family;
+        background-color: $color_fff;
+        li {
+            display: flex;
+            &:nth-child(1) {
+                div {
+                    &:nth-child(1) {
+                        width: 33%;
+                    }
+                    &:nth-child(2) {
+                        width: 40%;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                div:nth-child(1) {
+                    width: 73%;
+                }
+            }
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                div {
+                    &:nth-child(1) {
+                        width: 33%;
+                    }
+                    &:nth-child(2) {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    } // 联系人的信息
+    .contacts-info {
+        margin: 10px 0 10px 30px;
+        border: 1px solid $color_dee5e7;
+        padding: 14px 0 4px 34px;
+        font: 12px/40px $default_family;
+        background-color: $color_fff;
+        li {
+            display: flex;
+            div {
+                &:nth-child(1) {
+                    width: 33%;
+                }
+                &:nth-child(2) {
+                    width: 40%;
+                }
+            }
+        }
+    } // 服务记录
+    .final-battle {
+        display: flex;
+        margin-left: 30px;
+        > div {
+            width: 50%;
+            background-color: $color_fff;
+            &:nth-child(1) {
+                margin-right: 6px;
+            }
+            .title {
+                padding-left: 20px;
+                font: 700 12px/42px $default_family;
+                color: $color_333;
+            }
+            .record-content {
+                overflow: auto;
+                width: 530px;
+                height: 232px;
+                ul {
+                    li {
+                        font: 12px/26px $default_family;
+                        color: $color_333;
+                        .user-name {
+                            margin: 0 94px 0 50px;
+                        }
+                    }
+                }
+            }
+            .remark-content {
+                position: relative;
+                z-index: 0;
+                padding: 0 20px 58px 20px;
+                .textarea {
+                    margin-bottom: 10px;
+                    width: 99%;
+                    height: 170px;
+                    color: $color_333;
+                    background-color: $color_fff;
+                }
+                .text {
+                    line-height: 32px;
+                }
+                .submit {
+                    position: absolute;
+                    bottom: 14px;
+                    left: 46px;
+                    border: 1px solid $color_dee5e7;
+                    width: 76px;
+                    height: 32px;
+                    line-height: 32px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+                .back {
+                    position: absolute;
+                    right: 46px;
+                    bottom: 14px;
+                    border: 1px solid $color_dee5e7;
+                    width: 76px;
+                    height: 32px;
+                    line-height: 32px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        }
+    } // 新增门店
+    #shop-add {
+        padding: 10px 0 0 30px;
+        width: 95.8%;
+        &.base {
+            .title {
+                display: flex;
+                margin-bottom: -1px;
+                a {
+                    color: $color_333;
+                    width: 90px;
+                    height: 36px;
+                    font: 12px/36px $default_family;
+                    text-align: center;
+                    border-bottom-color: $color_fff;
+                    &.active:nth-child(1) {
+                        border: 1px solid $color_cfdadd;
+                        border-bottom-color: $color_fff;
+                        background-color: $color_fff;
+                    }
+                    &.current:nth-child(1) {
+                        border: 1px solid $color_fff;
+                        background-color: $color_fff;
+                    }
+                    &.active:nth-child(2) {
+                        border: 1px solid $color_cfdadd;
+                        border-left-color: $color_fff;
+                        border-bottom-color: $color_fff;
+                        background-color: $color_fff;
+                    }
+                }
+            }
+            .main {
+                background-color: $color_fff;
+                border: 1px solid $color_cfdadd;
+                padding: 25px 15px 0 15px;
+            }
+        }
+        .add-item {
+            display: flex;
+            margin-bottom: 25px;
+            font: 12px/34px $default_family;
+            &:nth-child(4) {
+                select {
+                    width: 102px;
+                    height: 32px;
+                }
+                .symbol {
+                    margin: 0 0 0 10px;
+                }
+            }
+            &:nth-child(5) {
+                input {
+                    // width: 60%;
+                }
+            }
+            > div {
+                display: flex;
+                position: relative;
+                &:nth-child(1) {
+                    width: 50%;
+                }
+                &.shop-img {
+                    margin-top: 18px;
+                    position: relative;
+                    z-index: 0;
+                    width: 20%;
+                    .js-upload {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        z-index: 0;
+                        width: 76px;
+                        height: 32px;
+                        border-left: 1px solid $color_cfdadd;
+                        cursor: pointer;
+                        text-align: center;
+                    }
+                }
+                .red {
+                    color: $color_red;
+                }
+                & #editor {}
+                &.upload-img-list {
+                    display: flex;
+                    div {
+                        position: relative;
+                        z-index: 0;
+                        margin-left: 30px;
+                        img {
+                            width: 52px;
+                            height: 52px;
+                            border: 4px solid $color_ccc;
+                        }
+                        .iconfont {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            z-index: 0;
+                            font-size: 20px;
+                            color: $color_red;
+                        }
+                    }
+                }
+                .text {
+                    width: 66px;
+                    height: 34px;
+                    text-align: right;
+                }
+                .icon-sousuo {
+                    position: absolute;
+                    top: 0;
+                    right: 23px;
+                    z-index: 0;
+                    color: $color_ccc;
+                }
+                .symbol {
+                    font-weight: bold;
+                    color: red;
+                }
+                select {
+                    margin: 0 10px;
+                    border: 1px solid $color_cfdadd;
+                    width: 204px;
+                    height: 32px;
+                    &.select {
+                        background: url(../images/bb.png) right center no-repeat;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        appearance: none;
+                    }
+                }
+                input {
+                    margin: 0 10px;
+                    border: 1px solid $color_cfdadd;
+                    width: 204px;
+                    padding-left: 10px;
+                    height: 32px;
+                    text-align: center;
+                }
+            }
+        }
+    } // 权限页面使用到的样式
+    #jurisdiction-content {
+        background-color: $color_fff;
+        margin-top: 2px;
+        padding: 0 0 0 30px;
+        .jurisdiction-title {
+            padding: 17px 0 4px 0;
+            font: 12px/30px $default_family;
+            color: $color_999;
+        }
+        .jurisdiction-main {
+            position: relative;
+            z-index: 0;
+            .search {
+                position: absolute;
+                bottom: -100px;
+                left: 0;
+                z-index: 0;
+                width: 76px;
+                height: 32px;
+                text-align: center;
+                line-height: 32px;
+                cursor: pointer;
+                border: 1px solid $color_cfdadd;
+            }
+            .save {
+                position: absolute;
+                bottom: -100px;
+                left: 250px;
+                z-index: 0;
+                width: 76px;
+                height: 32px;
+                text-align: center;
+                line-height: 32px;
+                cursor: pointer;
+                border: 1px solid $color_cfdadd;
+            }
+        }
+    } // sdk页面使用到的样式
+    #guide-content {
+        .edit-plug {
+            height: 50px;
+            background: red;
+        }
+        .platform-main {
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid $color_cfdadd;
+            font: 12px/20px $default_family;
+            h3 {
+                margin: 20px 0;
+            }
+            .strong_blue {
+                margin: 10px 20px;
+                color: $color_169BD5;
+            }
+        }
+    }
+}

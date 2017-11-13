@@ -1,0 +1,28 @@
+{
+    "name": "webapp",
+    "private": true,
+    "dependencies": {
+        "jquery": "^3.1.1",
+        "bootstrap": "^3.3.7"
+    },
+    "devDependencies":{
+        "modernizr": "~2.8.1",
+        "jquery": "^3.1.1",
+        "semantic": "^2.2.9",
+        "bootstrap": "^3.3.7"
+    },
+    "overrides": {
+        "semantic": {
+            "main": [
+                "dist/semantic.min.js",
+                "dist/semantic.min.css"
+            ]
+        },
+        "bootstrap": {
+            "main": [
+                "dist/js/bootstrap.min.js",
+                "dist/css/bootstrap.min.css"
+            ]
+        }
+    }
+}

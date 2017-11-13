@@ -1,0 +1,68 @@
+{
+  "name": "qowa",
+  "version": "1.0.0",
+  "description": "qowa setting",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "npm": "^3.10.10"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "express": "^4.15.2",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-file-include": "^1.1.0",
+    "gulp-filter": "^5.0.0",
+    "gulp-ftp": "^1.1.0",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-jsdoc3": "^1.0.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-main-bower-files": "^1.6.2",
+    "gulp-mocha": "^4.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-requirejs": "^0.3.0",
+    "gulp-requirejs-optimize": "^1.2.0",
+    "gulp-rev": "^8.0.0",
+    "gulp-rev-collector": "^1.2.2",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-useref": "^3.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^4.0.0",
+    "main-bower-files": "^2.13.1",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^2.1.0",
+    "wiredep": "^4.0.0"
+  },
+  "author": "qinyuanqi",
+  "license": "ISC",
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
+  }
+}
